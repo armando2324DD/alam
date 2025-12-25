@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carta para Alam 💌</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="floating-hearts-container" id="floatingHearts"></div>
+
+  <div class="carta-container">
+    <div class="carta-header">
+      <div class="paper-texture"></div>
+      <div class="header-content">
+        <div class="header-icons">
+          <svg class="icon-heart" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+          <svg class="icon-music" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 18V5l12-2v13M9 18c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3zm12-3c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3z"/>
+          </svg>
+        </div>
+        <h1>Para Alam</h1>
+        <p class="subtitle">Con todo mi cariño 💌</p>
+      </div>
+    </div>
+
+    <div class="carta-content">
+      <div class="message-box">
+        <p style="font-size: 1.125rem;">Querido Alam,</p>
+        <p>Canciones que puedas guardar en este baúl, para que cada vez que las escuches te acuerdes de mí, de nosotros, y del amor que te tengo. Con cariño, Armando.</p>
+      </div>
+
+      <div class="playlist-section" onclick="togglePlaylist('playlist1')">
+        <div class="playlist-header">
+          <div class="playlist-title">
+            <svg class="playlist-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 18V5l12-2v13M9 18c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3zm12-3c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3z"/>
+            </svg>
+            Tu Playlist
+          </div>
+          <svg class="arrow-icon" id="arrow1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </div>
+        <div class="songs-list" id="playlist1">
+          <div class="song-item">
+            <button class="play-button" onclick="togglePlay(event, 'song1')">
+              <svg class="play-icon" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <svg class="pause-icon" style="display:none;" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+            </button>
+            <div class="song-info">
+              <div class="song-title">Sparks</div>
+              <div class="song-artist">Coldplay</div>
+            </div>
+            <audio id="song1" src="canciones/sparks.mp3"></audio>
+          </div>
+          <div class="song-item">
+            <button class="play-button" onclick="togglePlay(event, 'song2')">
+              <svg class="play-icon" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <svg class="pause-icon" style="display:none;" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+            </button>
+            <div class="song-info">
+              <div class="song-title">I Wanna Be Yours</div>
+              <div class="song-artist">Arctic Monkeys</div>
+            </div>
+            <audio id="song2" src="canciones/i-wanna-be-yours.mp3"></audio>
+          </div>
+          <div class="song-item">
+            <button class="play-button" onclick="togglePlay(event, 'song3')">
+              <svg class="play-icon" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <svg class="pause-icon" style="display:none;" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+            </button>
+            <div class="song-info">
+              <div class="song-title">Melancolía</div>
+              <div class="song-artist">Mon Laferte</div>
+            </div>
+            <audio id="song3" src="canciones/melancolia.mp3"></audio>
+          </div>
+          <div class="song-item">
+            <button class="play-button" onclick="togglePlay(event, 'song4')">
+              <svg class="play-icon" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <svg class="pause-icon" style="display:none;" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+            </button>
+            <div class="song-info">
+              <div class="song-title">Otra Noche de Llorar</div>
+              <div class="song-artist">Mon Laferte</div>
+            </div>
+            <audio id="song4" src="canciones/Otra Noche de Llorar.mp3"></audio>
+          </div>
+          <div class="song-item">
+            <button class="play-button" onclick="togglePlay(event, 'song5')">
+              <svg class="play-icon" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <svg class="pause-icon" style="display:none;" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+            </button>
+            <div class="song-info">
+              <div class="song-title">Cry</div>
+              <div class="song-artist">C.A.S</div>
+            </div>
+            <audio id="song5" src="canciones/Cry - Cigarettes After Sex.mp3"></audio>
+          </div>
+          <div class="song-item">
+            <button class="play-button" onclick="togglePlay(event, 'song6')">
+              <svg class="play-icon" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <svg class="pause-icon" style="display:none;" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+            </button>
+            <div class="song-info">
+              <div class="song-title">innocence</div>
+              <div class="song-artist">Daniel Caesar</div>
+            </div>
+            <audio id="song6" src="canciones/innocence  daniel caesar.mp3"></audio>
+          </div>
+        </div>
+      </div>
+
+      <div class="playlist-section" onclick="togglePlaylist('playlist2')">
+        <div class="playlist-header">
+          <div class="playlist-title">
+            <svg class="playlist-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+            Canciones que me recuerdan a ti
+          </div>
+          <svg class="arrow-icon" id="arrow2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </div>
+        <div class="songs-list" id="playlist2">
+          <div class="song-item">
+            <button class="play-button" onclick="togglePlay(event, 'song7')">
+              <svg class="play-icon" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <svg class="pause-icon" style="display:none;" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+            </button>
+            <div class="song-info">
+              <div class="song-title">Love Like You</div>
+              <div class="song-artist">Rebecca Sugar</div>
+            </div>
+            <audio id="song7" src="canciones/Love Like You.mp3"></audio>
+          </div>
+          <div class="song-item">
+            <button class="play-button" onclick="togglePlay(event, 'song8')">
+              <svg class="play-icon" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <svg class="pause-icon" style="display:none;" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+            </button>
+            <div class="song-info">
+              <div class="song-title">This Is how It Feels</div>
+              <div class="song-artist">laufey x D4vd</div>
+            </div>
+            <audio id="song8" src="canciones/This Is How It Feels.mp3"></audio>
+          </div>
+          <div class="song-item">
+            <button class="play-button" onclick="togglePlay(event, 'song9')">
+              <svg class="play-icon" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <svg class="pause-icon" style="display:none;" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+            </button>
+            <div class="song-info">
+              <div class="song-title">Slow Dancing in the Dark</div>
+              <div class="song-artist">Joji</div>
+            </div>
+            <audio id="song9" src="canciones/Joji - SLOW DANCING IN THE DARK.mp3"></audio>
+          </div>
+          <div class="song-item">
+            <button class="play-button" onclick="togglePlay(event, 'song10')">
+              <svg class="play-icon" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <svg class="pause-icon" style="display:none;" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+            </button>
+            <div class="song-info">
+              <div class="song-title">Silver lining</div>
+              <div class="song-artist">Laufey</div>
+            </div>
+            <audio id="song10" src="canciones/Laufey - Silver Lining (Official Music Video).mp3"></audio>
+          </div>
+                    <div class="song-item">
+            <button class="play-button" onclick="togglePlay(event, 'song11')">
+              <svg class="play-icon" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <svg class="pause-icon" style="display:none;" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+            </button>
+            <div class="song-info">
+              <div class="song-title">Do i wanna know</div>
+              <div class="song-artist">Arctic Monkeys</div>
+            </div>
+            <audio id="song11" src="canciones/Arctic Monkeys - Do I Wanna Know_ (Official Video).mp3"></audio>
+          </div>
+        </div>
+      </div>
+
+      <div class="closing-message">
+        <p>Cada canción tiene razón de ser...</p>
+        <p class="signature">Con cariño, siempre 💛</p>
+      </div>
+    </div>
+
+    <div class="carta-footer"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
